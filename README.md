@@ -1,4 +1,6 @@
 # hello_node
 node application for testing Jenkins pipeline
 
-trigger pipeline
+changes from branch: weiming
+
+
