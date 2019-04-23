@@ -17,5 +17,15 @@ pipeline {
         }
       }
     }
+
+    stage('weiming 2') {
+      agent { label 'node-pod' }
+      steps {
+        sh 'node --version'
+        container('node-stable') {
+          sh 'npm test'
+        }
+      }
+    }
   }
 }
