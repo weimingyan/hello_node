@@ -1,30 +1,14 @@
 pipeline {
-  agent {
-    docker { image 'node:7-alpine' }
-  }
+  agent none
   stages {
-    stage('build') {
-      parallel {
-        stage('build') {
-          steps {
-            sh 'echo \'starting build\''
-            sh 'echo \'build done\''
-          }
-        }
-        stage('build_2_parallel') {
-          steps {
-            sh 'echo \'staring build 2....\''
-            sh 'echo \'finished build 2 parallel\''
-          }
-        }
-      }
-    }
     stage('test') {
+      agent { label 'nodejs-app' }
       steps {
         sh 'echo \'starting npm test\''
       }
     }
     stage('deploy') {
+      agent { label 'nodejs-app' }
       steps {
         sh 'echo \'deploying....\''
       }
