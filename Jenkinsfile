@@ -2,7 +2,7 @@ pipeline {
   agent none
   stages {
     stage('test') {
-      agent { label 'nodejs-app' }
+      agent { label 'node-pod' }
       steps {
         sh 'echo \'starting npm test\''
         container('node-stable') {
