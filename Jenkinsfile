@@ -1,7 +1,7 @@
 pipeline {
   agent none
   stages {
-    stage('test') {
+    stage('weiming') {
       agent { label 'node-pod' }
       steps {
         sh 'echo \'starting npm test\''
