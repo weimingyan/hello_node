@@ -22,7 +22,7 @@
     "collectCoverage": true,
     "coverageReporters": [
       "text-summary",
-      "html" 
+      "html"
     ]
   },
   "author": "weiming.yan",
