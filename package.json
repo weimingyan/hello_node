@@ -13,7 +13,7 @@
   "keywords": [
     "test"
   ],
-  "devDependencies": {
+  "devDependencies": { 
     "jest": "^23.6.0"
   },
   "dependencies": {},
